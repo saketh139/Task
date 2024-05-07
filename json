@@ -1,0 +1,53 @@
+import json
+
+def create_resume():
+    contact_info = {
+        "Email": "sakethraju00@gmail.com",
+        "Phone": "7893584793",
+        "Location": "Hyderabad",
+        "LinkedIn": "https://www.linkedin.com/in/saketh- ulasa- 176300242"
+    }
+   
+    objective = " Enthusiastic and motivated recent graduate with a strong foundation in Python programming."
+
+    skills = {
+        "Python": "Proficient in Python programming language.",
+        "NumPy": "Skilled in data manipulation and numerical computing using NumPy.",
+        "Pandas": "Experienced in data manipulation, analysis, and exploration with Pandas.",
+        "Calculus": "Knowledgeable in calculus principles.",
+        "Linear Algebra": "Familiar with linear algebra concepts.",
+        "Generative AI": "Familiar with generative AI techniques."
+    }
+
+    education = [
+        {"Institution": "Navodaya High School", "Location": "Naidupeta,Andhra Pradesh", "Year": 2017},
+        {"Institution": "Narayana Junior College", "Location": "Nellore,Andhra Pradesh", "Year": "2017-2019"},
+        {"Institution": "Danalakshmi College of Engineering", "Location": "Tamilnadu", "Year": "2019–2023"}
+    ]
+
+    project = {
+        "Title": "Drug Recommendation System in Medical Emergencies",
+        "Description": "Developed a web-based drug recommendation system for medical emergencies."
+    }
+
+    personal_strengths = ["Hardworking", "Determination", "Adaptability"]
+
+    declaration = "I declare that the above information is true to the best of my knowledge."
+
+    resume = {
+        "Contact Information": contact_info,
+        "Objective": objective,
+        "Skills": skills,
+        "Education": education,
+        "Project": project,
+        "Personal Strengths": personal_strengths,
+        "Declaration": declaration
+    }
+
+    return resume
+
+resume_data = create_resume()
+
+resume_json = json.dumps(resume_data, indent=4)
+
+print(resume_json)
